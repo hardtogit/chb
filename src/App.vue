@@ -4,11 +4,29 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <header-nav></header-nav>
     <router-view/>
   </div>
 </template>
+<script type="text/javascript">
+  import HeaderNav from './components/header-nav'
+  export default {
 
+
+
+
+    components:{
+      HeaderNav
+    }
+  }
+
+</script>
 <style lang="less">
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

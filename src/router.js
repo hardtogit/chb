@@ -1,20 +1,30 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import InfoManage from './views/infoManage/index'
+import MonitoringDate from './views/infoManage/monitoringDate'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/infoManage',
+      name: 'infoManage',
+      component: InfoManage,
+      children: [
+        { path: '/', redirect: '/infoManage/monitoringDate' },
+        {
+          // 当 /user/:id/profile 匹配成功，
+          // UserProfile 会被渲染在 User 的 <router-view> 中
+          path: '/infoManage/monitoringDate',
+          component: MonitoringDate
+        }
+      ]
     },
     {
-      path: '/about',
+      path: '/',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
