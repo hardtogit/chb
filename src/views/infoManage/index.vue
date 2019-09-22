@@ -27,7 +27,7 @@
     top:0;
     right: 0;
     bottom: 0;
-    padding: 108px 0 26px 259px;
+    padding: 134px 0 26px 259px;
     .content{
       width: 100%;
       /*height: 100%;*/

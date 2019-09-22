@@ -1,4 +1,13 @@
 <template>
+    <div>
+      <div class="topBar">
+        <span class="leftText">SCUDsmis V2.0</span>
+        <div class="icons">
+          <div class="icon one"></div>
+          <div class="icon two"></div>
+          <div class="icon three"></div>
+        </div>
+      </div>
     <div class="header">
       <div class="logo">
         <img src="../assets/img/LOGO-s.png" alt=""><div class="text">水库坝群安全风险智能管控平台</div>
@@ -52,6 +61,7 @@
         <p>admin</p>
       </div>
     </div>
+    </div>
 </template>
 
 <script>
@@ -61,12 +71,59 @@
 </script>
 
 <style scoped lang="less">
+  .topBar{
+    background-color: #adadad;
+    height: 26px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top:0;
+    left: 0;
+    text-align: left;
+    .leftText{
+      padding-left: 10px;
+      color: #fff;
+      line-height: 26px;
+    }
+    .icons{
+      display: inline-block;
+      float: right;
+      padding-right: 10px;
+      .icon{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-top: 3px;
+        cursor: pointer;
+        margin-left: 6px;
+        &.one{
+          background-image: url("../assets/img/one.png");
+        }
+        &.two{
+          background-image: url("../assets/img/two.png");
+        }
+        &.three{
+          background-image: url("../assets/img/three.png");
+        }
+        &.one:hover{
+          background-image: url("../assets/img/oneH.png");
+        }
+        &.two:hover{
+          background-image: url("../assets/img/twoH.png");
+        }
+        &.three:hover{
+          background-image: url("../assets/img/threeH.png");
+        }
+      }
+    }
+  }
     .header{
       height: 108px;
       width: 100%;
       z-index: 100;
       position: fixed;
-      top:0;
+      top:26px;
+      left: 0;
       border-top: 5px solid #31343f;
       background-color: #3f496c;
       .logo{
@@ -90,6 +147,9 @@
         .router{
             width: 166px;
             height: 100%;
+            border-left: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+          margin-right: 1px;
             display: inline-block;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;

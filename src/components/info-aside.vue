@@ -3,9 +3,9 @@
       <div class="group">
        <div class="menu">信息管控 <div :class="['arrow',visibleOne&&'active']" @click="handleClickArrow('visibleOne')"></div></div>
         <div class="items" v-show="visibleOne">
-          <div class="item active">监测数据</div>
-          <div class="item">巡视数据</div>
-          <div class="item">仪器信息</div>
+          <router-link to="/infoManage/monitoringDate" class="item active">监测数据</router-link>
+          <router-link to="/infoManage/tourDate" class="item">巡视数据</router-link>
+          <router-link to="/infoManage/instrumentDate" class="item">仪器信息</router-link>
         </div>
       </div>
       <div class="group tree">
@@ -95,7 +95,7 @@
    top:0;
    height: 100%;
    width: 259px;
-   padding: 108px 3px 26px 1px;
+   padding: 134px 3px 26px 1px;
    .group{
      margin-top: 3px;
      &.tree{
@@ -126,6 +126,8 @@
        border: 1px solid #999;
        padding-top: 2px;
        .item{
+         display: block;
+         text-decoration: none;
          height: 49px;
          line-height: 49px;
          text-align: center;
@@ -133,7 +135,8 @@
          color: #333;
          background-color: #a0a0a0;
          margin-top: 1px;
-         &.active{
+         cursor: pointer;
+         &.active,&:hover{
            background-color: #ffcc6b;
          }
        }
@@ -141,8 +144,8 @@
           height: calc(100% - 46px);
          overflow: auto;
          #treeInner{
-           width: 100%;
-           height: 100%;
+           width: 120%;
+           height: 120%;
          }
        }
      }

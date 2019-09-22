@@ -57,6 +57,7 @@
     .tabs{
       text-align: left;
       border: 1px solid #8e8e8e;
+      border-right: none;
       border-radius: 3px;
       display: inline-block;
       .tab{
@@ -65,7 +66,8 @@
         display: inline-block;
         text-align: center;
         line-height: 29px;
-        border-right: 1px solid #b8b9bb;
+        border-right: 1px solid #999;
+        border-top-right-radius: 10px;
         color: #696969;
         cursor: pointer;
         &:hover,&.active{
