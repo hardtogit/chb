@@ -3,9 +3,9 @@
       <div class="group">
        <div class="menu">信息管控 <div :class="['arrow',visibleOne&&'active']" @click="handleClickArrow('visibleOne')"></div></div>
         <div class="items" v-show="visibleOne">
-          <router-link to="/infoManage/monitoringDate" class="item active">监测数据</router-link>
-          <router-link to="/infoManage/tourDate" class="item">巡视数据</router-link>
-          <router-link to="/infoManage/instrumentDate" class="item">仪器信息</router-link>
+          <router-link to="/infoManage/monitoringDate" class="item" active-class="active">监测数据</router-link>
+          <router-link to="/infoManage/tourDate" class="item" active-class="active">巡视数据</router-link>
+          <router-link to="/infoManage/instrumentDate" class="item" active-class="active">仪器信息</router-link>
         </div>
       </div>
       <div class="group tree">
